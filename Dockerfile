@@ -1,4 +1,4 @@
-FROM fedora:20
+FROM maxamillion/fedora-armhfp
 MAINTAINER http://fedoraproject.org/wiki/Cloud
 
 RUN yum -y update && yum clean all
