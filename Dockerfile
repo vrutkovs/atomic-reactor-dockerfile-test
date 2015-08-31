@@ -11,6 +11,7 @@ EXPOSE 80
 ADD run-apache.sh /run-apache.sh
 RUN chmod -v +x /run-apache.sh
 
+LABEL BZComponent testing
 LABEL NAME testing
 LABEL VERSION 0.0.1
 LABEL RELEASE 1
