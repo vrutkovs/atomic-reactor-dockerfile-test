@@ -11,4 +11,9 @@ EXPOSE 80
 ADD run-apache.sh /run-apache.sh
 RUN chmod -v +x /run-apache.sh
 
+LABEL NAME testing
+LABEL VERSION 0.0.1
+LABEL RELEASE 1
+LABEL ARCHITECTURE x86_64
+
 CMD ["/run-apache.sh"]
