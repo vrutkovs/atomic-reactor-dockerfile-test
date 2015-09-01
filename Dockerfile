@@ -13,7 +13,7 @@ RUN chmod -v +x /run-apache.sh
 
 LABEL BZComponent testing
 LABEL Version 0.0.1
-LABEL Release 5
+LABEL Release 6
 LABEL Architecture x86_64
 
 CMD ["/run-apache.sh"]
