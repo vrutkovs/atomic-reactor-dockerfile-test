@@ -1,8 +1,6 @@
 FROM fedora:latest
 MAINTAINER http://fedoraproject.org/wiki/Cloud
 
-LABEL Name apache
-
 RUN dnf -y update && dnf clean all
 RUN dnf -y install httpd && dnf clean all
 RUN echo "Apache" >> /var/www/html/index.html
@@ -13,9 +11,10 @@ EXPOSE 80
 ADD run-apache.sh /run-apache.sh
 RUN chmod -v +x /run-apache.sh
 
-LABEL BZComponent testing
-LABEL Version 0.0.1
-LABEL Release 7
-LABEL Architecture x86_64
+LABEL "Name"="apache" \
+      "Version"="0.0.1" \
+      "Release"="7" \
+      "Architecture"="x86_64" \
+      "BZComponent"="testing"
 
 CMD ["/run-apache.sh"]
