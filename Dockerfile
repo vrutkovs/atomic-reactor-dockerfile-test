@@ -1,7 +1,7 @@
 FROM fedora:latest
 MAINTAINER http://fedoraproject.org/wiki/Cloud
 
-LABEL Name apache-1
+LABEL Name apache-2
 
 RUN dnf -y update && dnf clean all
 RUN dnf -y install httpd && dnf clean all
